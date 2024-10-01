@@ -1,4 +1,3 @@
-
 // Nome do cache
 const CACHE_NAME = 'my-app-cache-v1';
 // Arquivos a serem armazenados em cache
