@@ -1,0 +1,244 @@
+/* rank.css */
+* {
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+header {
+    background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+p{
+    color: gray;
+    text-align: center;
+    font-size: 18px;
+}
+
+.rebob {
+    color: #ffffff;
+    margin: 0;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+p>span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%; /* Faz o main ocupar toda a largura */
+    padding: 0; /* Remove padding para evitar espaços */
+    overflow-y: auto; /* Permite rolagem vertical */
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Faz as seções ocuparem toda a largura */
+    max-width: 600px; /* Limita a largura máxima das seções */
+    margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
+}
+
+h2.vemax {
+    text-align: center;
+    color: #7c7575;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: yellow;
+    border-radius: 30px;
+    padding: 5px;
+    border: 2px solid; /* Defina a largura e o estilo da borda */
+    border-color: #7c7575;
+}
+
+h2.profama {
+    text-align: center;
+    color: rgb(253, 153, 3);
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #c51d1dd0;
+    border-radius: 30px;
+    padding: 5px;
+    border: 2px solid; /* Defina a largura e o estilo da borda */
+    border-color: #030303;
+}
+
+
+canvas {
+    margin: 20px 0;
+    max-width: 100%; /* Garante que o canvas não exceda a largura da tela */
+    min-height: 200px; /* Altura mínima para o canvas */
+}
+
+.ranking div {
+    margin-bottom: 10px;
+    background-color: #0000000e;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; /* Alinha o texto ao centro em relação à imagem */
+}
+
+.ranking img {
+    width: 40px; /* Tamanho das mini fotos */
+    height: 40px;
+    border-radius: 50%; /* Deixa as imagens redondas */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    section {
+        width: 100%; /* Faz as seções ocuparem toda a largura em telas pequenas */
+        margin: 10px auto; /* Centraliza a seção e adiciona margem vertical */
+    }
+
+    .ranking img {
+        width: 30px; /* Ajusta o tamanho das imagens em dispositivos móveis */
+        height: 30px;
+    }
+
+    .ranking div {
+        padding: 8px; /* Ajusta o padding em dispositivos móveis */
+    }
+}
+
+.button-back {
+    text-decoration: none;
+    padding: 13px 20px;
+    background: #032ef1;
+    color: #ffffff; /* Cor branca para o texto */
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease; /* Adiciona uma transição para transformação */
+    border: none; /* Remover a borda */
+    margin: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.button-back:hover {
+    background: #021bbd; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fica fixo */
+    z-index: 1; /* Fica por cima */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com opacidade */
+}
+
+.modal>p {
+    margin: 0;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% do topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Pode ser mais ou menos, dependendo do tamanho da tela */
+    text-align: center;
+    border-radius: 40px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding-right: 0px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalImage {
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* Para deixar a imagem arredondada */
+}
+
+.dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .dock-item {
+    background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
+    -webkit-background-clip: text; /* Faz o fundo do texto ser recortado */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+  
+  .dock-item i {
+    font-size: 24px;
+    display: block;
+  }
+  
+  .dock-item span {
+    margin-top: 5px;
+    display: block;
+    font-size: 12px;
+  }
+  
+  .dock-item:hover {
+    background-color: #4caf4f00;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+
+

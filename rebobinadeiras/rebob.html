@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking de Produção</title>
+    <link rel="stylesheet" href="rebob.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+</head>
+<body>
+    <header>
+        <h1>Ranking de Produção <i class="fas fa-trophy"></i></h1>
+        <p class="rebob">Rebobinadeiras</p>
+    </header>
+    <main>
+        <section id="machine1">
+            <p>Primeira rodada começa em <span>OUTUBRO/2024</span>.</p>
+            <h2 class="vemax">Vemax VRXS STDH 1400</h2>
+            <div id="totalMachine1"></div>
+            <canvas id="chartMachine1"></canvas>
+            <div id="rankingMachine1" class="ranking"></div>
+        </section>
+        <section id="machine2">
+            <h2 class="profama">PROFAMA</h2>
+            <div id="totalMachine2"></div>
+            <canvas id="chartMachine2"></canvas>
+            <div id="rankingMachine2" class="ranking"></div>
+        </section>
+        <button class="button-back" onclick="history.back()">Voltar</button>
+    </main>
+    <!-- Modal para Informações do Funcionário -->
+<div id="employeeModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="" />
+      <h2 id="modalName"></h2>
+      <p id="modalProduction"></p>
+      <p id="modalDescription"></p>
+  </div>
+</div>
+
+<footer class="dock">
+  <a href="/index.html" class="dock-item">
+    <i class="fas fa-home"></i>
+    <span>Home</span>
+  </a>
+  <a href="https://api.whatsapp.com/send?phone=5511932590460&text=Oi,%20voc%C3%AA%20est%C3%A1%20dispon%C3%ADvel%3F" class="dock-item">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+  <a href="/highlights/high.html" class="dock-item">
+      <i class="fa-solid fa-medal"></i>
+  <span>Rank</span>
+</a>
+<a href="/about/about.html" class="dock-item">
+  <i class="fas fa-info-circle"></i>
+  <span>About</span>
+</a>
+</footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="rebob.js"></script>
+</body>
+</html>

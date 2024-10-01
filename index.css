@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f3;
+    color: #333;
+}
+
+header {
+    display: flex; /* Utiliza Flexbox para alinhar os itens */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
+    -webkit-background-clip: text; /* Faz o fundo do texto ser recortado */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+}
+
+.header-icon {
+    width: 50px; /* Ajuste o tamanho do ícone */
+    height: 50px; /* Ajuste o tamanho do ícone */
+    margin-right: 15px; /* Espaçamento à direita do ícone */
+}
+
+h1 {
+    margin: 0; /* Remove margens do título */
+}
+
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #962e96;
+    font-size: 30PX;
+}
+
+.sectors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 250px);
+}
+
+.sector-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sector-card {
+    background: white;
+    border-radius: 15px; /* Aumenta o arredondamento */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 160px; /* Ajusta a largura */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Para posicionar o texto */
+    overflow: hidden; /* Impede que o texto ultrapasse a div */
+}
+
+.sector-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sector-card i {
+    font-size: 48px; /* Aumenta o tamanho do ícone */
+    background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
+    -webkit-background-clip: text; /* Faz o fundo do texto ser recortado */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    margin-bottom: 10px;
+}
+
+.sector-card h3 {
+    font-size: 18px; /* Tamanho do texto do setor */
+    margin: 0; /* Remove margens */
+    white-space: nowrap; /* Impede que o texto quebre */
+    overflow: hidden; /* Oculta o texto que sai da div */
+    text-overflow: ellipsis; /* Adiciona reticências ao final do texto longo */
+    font-weight: bold;
+}
+
+.ranking-section {
+    padding: 20px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.ranking-list {
+    margin-top: 20px;
+}
+
+.ranking-list div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ranking-list img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.total-production {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .dock-item {
+    background: linear-gradient(135deg, #6a11cb, #b721ff, #fc4a1a, #f7b733);
+    -webkit-background-clip: text; /* Faz o fundo do texto ser recortado */
+    color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    flex-grow: 1;
+  }
+  
+  .dock-item i {
+    font-size: 24px;
+    display: block;
+  }
+  
+  .dock-item span {
+    margin-top: 5px;
+    display: block;
+    font-size: 12px;
+  }
+  
+  .dock-item:hover {
+    background-color: #00000000;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .sector-buttons {
+        width: 100%;
+    }
+    .sector-card {
+        width: 90%; /* Aumenta a largura para dispositivos móveis */
+    }
+}
+
+@keyframes vibrate {
+    0% { transform: translate(1px, 1px); }
+    20% { transform: translate(-1px, -2px); }
+    40% { transform: translate(-3px, 0); }
+    60% { transform: translate(3px, 2px); }
+    80% { transform: translate(-1px, 1px); }
+    100% { transform: translate(1px, -1px); }
+}
+
+.vibrate {
+    animation: vibrate 0.3s ease-in-out infinite;
+}
