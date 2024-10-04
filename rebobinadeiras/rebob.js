@@ -2,18 +2,18 @@
 
 // Dados fictícios organizados por operadores para a Máquina 1
 const dataMachine1 = [
-    { name: 'MARCIO', production: 0 },
-    { name: 'MANOEL', production: 0 },
-    { name: 'WESLEY', production: 0 },
-    { name: 'LUIZ', production: 0 }
+    { name: 'MARCIO', production: 1.66 },
+    { name: 'MANOEL', production: 6.8 },
+    { name: 'WESLEY', production: 1.07 },
+    { name: 'LUIZ', production: 6.24 }
 ];
 
 // Dados fictícios organizados por operadores para a Máquina 2
 const dataMachine2 = [
-    { name: 'RENÊ', production: 0 },
-    { name: 'VITOR', production: 0 },
-    { name: 'DOUGLAS', production: 0 },
-    { name: 'ERIC', production: 0 }
+    { name: 'RENÊ', production: 3.87 },
+    { name: 'VITOR', production: 2.59 },
+    { name: 'DOUGLAS', production: 4.55 },
+    { name: 'ERIC', production: 1.96 }
 ];
 
 const employeesMachine1 = [
@@ -167,6 +167,33 @@ window.onclick = function(event) {
 // Inicializar gráficos e rankings
 createCharts();
 generateRankings();
+
+
+// Função para formatar a data e hora sem "às"
+function formatDateTime() {
+    const now = new Date();
+    const optionsDate = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = now.toLocaleDateString('pt-BR', optionsDate);
+    
+    // Formatar a hora sem o "às"
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const formattedTime = `${hours}:${minutes}`;
+    
+    return `${formattedDate} ${formattedTime}`;
+}
+
+// Função para atualizar a hora em tempo real
+function updateDateTime() {
+    document.getElementById('currentDate').textContent = formatDateTime();
+}
+
+// Atualizar a hora a cada segundo
+setInterval(updateDateTime, 1000);
+
+// Exibir a hora assim que a página carregar
+updateDateTime();
+
 
 
 
